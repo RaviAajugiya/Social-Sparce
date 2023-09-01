@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        /* Your custom styles can go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .photo-gallery-inside {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .photo-gallery-item {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        .photo-gallery-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .photo-gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .image-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+        .photo-gallery-item:hover .image-title {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photo-gallery-inside">
+            <div class="photo-gallery-item">
+                <a href="Images/Dark.webp" data-lightbox="photos">
+                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    <span class="image-title">Image Title 1</span>
+                </a>
+            </div>
+            <div class="photo-gallery-item">
+                <a href="Images/Dark.webp" data-lightbox="photos">
+                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    <span class="image-title">Image Title 2</span>
+                </a>
+            </div>
+            <div class="photo-gallery-item">
+                <a href="Images/Dark.webp" data-lightbox="photos">
+                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    <span class="image-title">Image Title 3</span>
+                </a>
+            </div>
+            <div class="photo-gallery-item">
+                <a href="Images/Dark.webp" data-lightbox="photos">
+                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    <span class="image-title">Image Title 4</span>
+                </a>
+            </div>
+            <div class="photo-gallery-item">
+                <a href="Images/Dark.webp" data-lightbox="photos">
+                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    <span class="image-title">Image Title 4</span>
+                </a>
+            </div>
+            <div class="photo-gallery-item">
+                <a href="Images/Dark.webp" data-lightbox="photos">
+                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    <span class="image-title">Image Title 4</span>
+                </a>
+            </div>
+            <div class="photo-gallery-item">
+                <a href="Images/Dark.webp" data-lightbox="photos">
+                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    <span class="image-title">Image Title 4</span>
+                </a>
+            </div>
+            <!-- Repeat more photo-gallery-items here -->
+        </div>
+    </div>
+</body>
+</html>
