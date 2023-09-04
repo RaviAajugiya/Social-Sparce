@@ -48,7 +48,7 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family={{SecondaryFont}}:wght@300;400;500;600;700;800;900&display=swap">
     </noscript>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,6 +65,7 @@
         }
 
         .photo-gallery-inside {
+            margin: 20px 0;
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
@@ -73,6 +74,7 @@
         }
 
         .photo-gallery-item {
+            
             position: relative;
             overflow: hidden;
             transition: transform 0.3s ease;
@@ -150,62 +152,38 @@
                         </span>
                     </button>
                 </div>
-                <header class="main-header">
-                    <div class="container">
-                        <div class="nav-inside">
-                            <div class="nav-items">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav"
-                                    aria-expanded="false" aria-label="Toggle navigation" tabindex="-1">
-                                    <span class="navbar-toggler-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 6H20M4 12H20M4 18H20" stroke="black" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                    <span hidden class="navbar-toggler-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M18 6L6 18M6 6l12 12" stroke="black" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                </button>
-                            </div>
-                            <nav class="navbar navbar-expand-lg" id="navbar_top">
-                                <div class="collapse navbar-collapse" id="main_nav">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link hover-underline" href="index.html" itemscope=""
-                                                itemtype="https://www.schema.org/SiteNavigationElement">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="about.html" itemscope=""
-                                                itemtype="https://www.schema.org/SiteNavigationElement">About Us</a>
-                                        </li>
-                                        <li class="nav-item dropdown has-megamenu categorylist">
-                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" itemscope=""
-                                                itemtype="https://www.schema.org/SiteNavigationElement">Products</a>
-            
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="update.html" itemscope=""
-                                                itemtype="https://www.schema.org/SiteNavigationElement">Updates</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="Gallery.html" itemscope=""
-                                                itemtype="https://www.schema.org/SiteNavigationElement">Gallery</a></li>
-            
-                                        <li class="nav-item"><a class="nav-link" href="contact.html" itemscope=""
-                                                itemtype="https://www.schema.org/SiteNavigationElement">Contact Us</a></li>
-                                    </ul>
+                <nav class="navbar navbar-expand-lg" id="navbar_top">
+                    <div class="collapse navbar-collapse" id="main_nav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html" itemscope=""
+                                    itemtype="https://www.schema.org/SiteNavigationElement">Home</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="about.html" itemscope=""
+                                    itemtype="https://www.schema.org/SiteNavigationElement">About Us</a></li>
+                            <li class="nav-item dropdown has-megamenu categorylist">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" itemscope=""
+                                    itemtype="https://www.schema.org/SiteNavigationElement">Products</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
                                 </div>
-                            </nav>
-                        </div>
-                    </div>
-                </header>
-                <style>
-                    /* .dropdown:after {
-                        background-image:url({{S3Folder}}images/dropdown.png);
-                    } */
-                </style>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="update.html" itemscope=""
+                                    itemtype="https://www.schema.org/SiteNavigationElement">Updates</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gallery.html" itemscope=""
+                                    itemtype="https://www.schema.org/SiteNavigationElement">Gallery</a></li>
+
+                            <!-- <li class="nav-item header-custom-page"><a class="nav-link" href="{{CustomPage}}.html" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">{{CustomPageName}}</a></li> -->
+                            <li class="nav-item"><a class="nav-link" href="contact.html" itemscope=""
+                                    itemtype="https://www.schema.org/SiteNavigationElement">Contact Us</a></li>
+                        </ul>
+                    </div><!--navbar-collapse-->
+                </nav>
+
             </div>
         </div>
     </header>
@@ -215,14 +193,14 @@
     <div class="banner-area">
         <div class="container">
             <div class="banner-content">
-                <h1 class="title">{{GalleryPageTitle}}</h1>
+                <h1 class="title">Gallery</h1>
             </div>
         </div>
     </div>
     <!-- Site Banner Section End-->
 
     <!-- Gallery Section Here-->
-    <div class="container">
+    <div class="container spad">
         <div class="photo-gallery-inside">
             <div class="photo-gallery-item">
                 <a href="Images/Dark.webp" data-lightbox="photos">
@@ -377,7 +355,7 @@
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                            <li class="nav-item"><a class="nav-link" href="update-page-1.html">Update</a></li>
+                            <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
                             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                         </ul>
@@ -444,7 +422,9 @@
     <!--Footer sections-end-->
 
 
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="sc.js"></script>
 </body>
 
 </html>

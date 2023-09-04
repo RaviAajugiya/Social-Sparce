@@ -2,316 +2,185 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+	<title>{{ProductDetailsPageTitle}} - {{SiteTitle}} - {{KeyLine}}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="{{SiteTitle}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow " />
+	<link rel="canonical" href="{{Site-Url}}" />
+	<Meta name="language" content="English" />
+	<meta name="title" content="{{ProductDetailsPageTitle}} - {{SiteTitle}} - {{KeyLine}}">
+	<meta name="description" content="{{ProductDetailsDescription}}" />
+	<meta name="keywords" content="{{ProductDetailsKeyword}}" />
+
+    <meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ProductDetailsPageTitle}} - {{SiteTitle}} - {{KeyLine}}" />
+	<meta property="og:description" content="{{ProductDetailsDescription}}" />
+	<meta property="og:image" content="{{Logo}}" />
+	<meta property="og:url" content="{{Site-Url}}" />
+	<meta property="og:site_name" content="{{SiteTitle}}" />
+
+    <meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="{{SiteTitle}}" />
+	<meta name="twitter:title" content="{{ProductDetailsPageTitle}} - {{SiteTitle}} - {{KeyLine}}" />
+	<meta name="twitter:description" content="{{ProductDetailsDescription}}" />
+	<meta name="twitter:image" content="{{Logo}}" />
+
+    <link rel="icon" type="image/x-icon" href="{{Favicon}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family={{PrimaryFont}}:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family={{PrimaryFont}}:wght@300;400;500;600;700;800;900&display=swap">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family={{PrimaryFont}}:wght@300;400;500;600;700;800;900&display=swap">
+    </noscript>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family={{SecondaryFont}}:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family={{SecondaryFont}}:wght@300;400;500;600;700;800;900&display=swap">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family={{SecondaryFont}}:wght@300;400;500;600;700;800;900&display=swap">
+    </noscript>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .products-price{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .products-meta{
+        margin: 20px 0px;
+        text-align: left;
+    }
+  </style>
 </head>
-<style>
-
-:root {
-  --primary-color: #0f561a;
-  --second-color: #8fd299;
-  --white: #ffffff;
-  --dark: #506172;
-  --bgcolor: #e0ebf1;
-  --primary-font: "Poppins", sans-serif;
-  --second-font: "Signika", sans-serif;
-}
-
-    
-body {
-    font-family: var(--primary-font);
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  p {
-    margin: 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .contact-information{
-    font-size: 20px;
-  }
-  
-  .contact-us-inside {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-us-items:first-child {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .contact-ditails {
-    margin: 0 0px;
-    padding: 10px;
-    min-width: 200px;
-    flex: 25%;
-    text-align: center;
-    border: 2px solid var(--second-color);
-    border-radius: 10px;
-    transition: box-shadow 0.5s ease-out;
-  }
-  .contact-ditails:hover {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  }
-  
-  .contact-ditails-icon {
-    width: 35px;
-    fill: var(--second-color);
-    background-color: var(--white);
-    margin: auto;
-    padding: 20px;
-  }
-  .contact-title{
-        text-align: center !important;
-  }
-  .contact-text .contact-title {
-    font-size: 25px;
-  }
-  
-  .contact-information {
-    display: inline-block;
-    margin: 20px 0;
-  }
-  
-  .contact-form input[type=text],
-  .contact-form textarea[type=text] {
-    box-sizing: border-box;
-    font-family: var(--primary-font);
-    width: calc(100% - 20px);
-    border-radius: 0.25rem;
-    font-size: 18px;
-    font-weight: 500;
-    height: auto;
-    margin: 10px;
-    padding: 15px 10px;
-    outline: 0;
-    color: var(--dark);
-    border: 1px var(--primary-color) solid;
-  }
-  
-  .contact-form input[type=text]::-moz-placeholder, .contact-form textarea[type=text]::-moz-placeholder {
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .contact-form input[type=text]::placeholder,
-  .contact-form textarea[type=text]::placeholder {
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .contact-form {
-    margin-top: 50px;
-    font-size: 20px;
-  }
-  .contact-form .title {
-    text-align: center;
-  }
-  
-  .form-items {
-    text-align: center;
-  }
-  .form-items button {
-    margin: 25px;
-    width: 150px;
-    height: 40px;
-    border: 1px solid black;
-    font-size: 18px;
-    transition: all 1s ease-out;
-    background-color: var(--white);
-  }
-  .form-items button:hover {
-    background-color: var(--second-color);
-  }/*# sourceMappingURL=contact.css.map */
-</style>
-<body>
 
 
-    <header class="main-header">
-        <div class="container">
-            <div class="nav-inside">
-                <div class="nav-items">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="Images/logo.svg" alt="Netflix" width="100%" height="100%" itemprop="image">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav"
-                        aria-expanded="false" aria-label="Toggle navigation" tabindex="-1">
-                        <span class="navbar-toggler-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 6H20M4 12H20M4 18H20" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                        <span hidden class="navbar-toggler-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 6L6 18M6 6l12 12" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                </div>
-                <nav class="navbar navbar-expand-lg" id="navbar_top">
-                    <div class="collapse navbar-collapse" id="main_nav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html" itemscope=""
-                                    itemtype="https://www.schema.org/SiteNavigationElement">Home</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="about.html" itemscope=""
-                                    itemtype="https://www.schema.org/SiteNavigationElement">About Us</a></li>
-                            <li class="nav-item dropdown has-megamenu categorylist">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" itemscope=""
-                                    itemtype="https://www.schema.org/SiteNavigationElement">Products</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
-                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
-                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
-                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
-                                    <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
-                                </div>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="update.html" itemscope=""
-                                    itemtype="https://www.schema.org/SiteNavigationElement">Updates</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html" itemscope=""
-                                    itemtype="https://www.schema.org/SiteNavigationElement">Gallery</a></li>
 
-                            <!-- <li class="nav-item header-custom-page"><a class="nav-link" href="{{CustomPage}}.html" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">{{CustomPageName}}</a></li> -->
-                            <li class="nav-item"><a class="nav-link" href="contact.html" itemscope=""
-                                    itemtype="https://www.schema.org/SiteNavigationElement">Contact Us</a></li>
-                        </ul>
-                    </div><!--navbar-collapse-->
-                </nav>
+<body itemscope="" itemtype="http://schema.org/LocalBusiness">
 
+    <!-- Back to Top -->
+    <!-- Back to Top End -->
+
+   <!--Header sections-->
+   <header class="main-header">
+    <div class="container">
+        <div class="nav-inside">
+            <div class="nav-items">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Images/logo.svg" alt="Netflix" width="100%" height="100%" itemprop="image">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav"
+                    aria-expanded="false" aria-label="Toggle navigation" tabindex="-1">
+                    <span class="navbar-toggler-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span hidden class="navbar-toggler-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6l12 12" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
             </div>
-        </div>
-    </header>
+            <nav class="navbar navbar-expand-lg" id="navbar_top">
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" itemscope=""
+                                itemtype="https://www.schema.org/SiteNavigationElement">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html" itemscope=""
+                                itemtype="https://www.schema.org/SiteNavigationElement">About Us</a></li>
+                        <li class="nav-item dropdown has-megamenu categorylist">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" itemscope=""
+                                itemtype="https://www.schema.org/SiteNavigationElement">Products</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                                <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                                <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                                <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                                <a class="dropdown-item" href="productdetails.html">lorem ipsum Dolor</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="update.html" itemscope=""
+                                itemtype="https://www.schema.org/SiteNavigationElement">Updates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html" itemscope=""
+                                itemtype="https://www.schema.org/SiteNavigationElement">Gallery</a></li>
 
-    <div class="banner-area">
-        <div class="container">
-            <div class="banner-content">
-                <div class="title">Contact Us</div>
-            </div>
+                        <!-- <li class="nav-item header-custom-page"><a class="nav-link" href="{{CustomPage}}.html" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">{{CustomPageName}}</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="contact.html" itemscope=""
+                                itemtype="https://www.schema.org/SiteNavigationElement">Contact Us</a></li>
+                    </ul>
+                </div><!--navbar-collapse-->
+            </nav>
+
         </div>
     </div>
+</header>
+	<!--Header sections-end-->
 
-    <!--Contact Sections-Here-->
-    <div class="contact-us spad">
-        <div class="container">
-            <div class="contact-us-inside">
-                <div class="contact-us-items">
-                    <div class="contact-ditails">
-                        <div class="contact-ditails-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512"
-                                viewBox="0 0 512 512">
-                                <g>
-                                    <g>
-                                        <path
-                                            d="m256 0c-99.25 0-180 80.75-180 180 0 127.602 170.388 319.553 180 332 .079-.103 180-199.882 180-332 0-99.25-80.75-180-180-180zm0 270c-49.63 0-90-40.37-90-90s40.37-90 90-90 90 40.37 90 90-40.37 90-90 90z">
-                                        </path>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            <div itemprop="address">
-                                <a class="contact-title" itemprop="brand">Address Information</a>
-                                <p class="contact-information" itemprop="streetAddress">Nakshatra Heights 150 Feet Ring Road, Opp Raiya Telephone Exchange,</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-ditails">
-                        <div class="contact-ditails-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_3" viewBox="0 0 32 32"
-                                data-name="Layer 3">
-                                <path
-                                    d="m29.393 23.36c-.874-.733-6-3.979-6.852-3.83-.4.071-.706.412-1.525 1.389a11.687 11.687 0 0 1 -1.244 1.347 10.757 10.757 0 0 1 -2.374-.88 14.7 14.7 0 0 1 -6.784-6.786 10.757 10.757 0 0 1 -.88-2.374 11.687 11.687 0 0 1 1.347-1.244c.976-.819 1.318-1.123 1.389-1.525.149-.854-3.1-5.978-3.83-6.852-.306-.362-.584-.605-.94-.605-1.032 0-5.7 5.772-5.7 6.52 0 .061.1 6.07 7.689 13.791 7.721 7.589 13.73 7.689 13.791 7.689.748 0 6.52-4.668 6.52-5.7 0-.356-.243-.634-.607-.94z">
-                                </path>
-                                <path d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"></path>
-                                <path d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"></path>
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            <p class="contact-title">Phone number</p>
-                            <a class="contact-information" href="tel:{{MobileNumber}}" itemprop="telephone">+91 1234567890</a>
-                        </div>
-                    </div>
-                    <div class="contact-ditails">
-                        <div class="contact-ditails-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" enable-background="new 0 0 512 512"
-                                viewBox="0 0 512 512">
-                                <path
-                                    d="m298.789 313.693c-12.738 8.492-27.534 12.981-42.789 12.981-15.254 0-30.05-4.489-42.788-12.981l-209.803-139.873c-1.164-.776-2.298-1.585-3.409-2.417v229.197c0 26.278 21.325 47.133 47.133 47.133h417.733c26.278 0 47.133-21.325 47.133-47.133v-229.198c-1.113.834-2.249 1.645-3.416 2.422z">
-                                </path>
-                                <path
-                                    d="m20.05 148.858 209.803 139.874c7.942 5.295 17.044 7.942 26.146 7.942 9.103 0 18.206-2.648 26.148-7.942l209.803-139.874c12.555-8.365 20.05-22.365 20.05-37.475 0-25.981-21.137-47.117-47.117-47.117h-417.766c-25.98.001-47.117 21.137-47.117 47.142 0 15.085 7.496 29.085 20.05 37.45z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            <p class="contact-title">Mail Address</p>
-                            <a class="contact-information" href="mailto:{{Email}}" itemprop="email">your@mail.com</a>
-                        </div>
-                    </div>
+    <!-- Site Banner Section Here-->
+        <div class="banner-area">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="title">Product Details</div>
                 </div>
-                <div class="contact-us-items">
-                    <div class="contact-form">
-                        <h2 class="title underline">Send us a Message </h2>
-                        <form method="post" id="contactus-form">
-                            <div class="form-inside">
-                                <div class="form-items">
-                                    <input type="text" id="name-key" name="first-name" placeholder="Your Name"
-                                        class="form-control" required="*">
-                                </div>
-                                <div class="form-items">
-                                    <input type="text" id="email-key" name="Email" placeholder="Your Email"
-                                        class="form-control" required="*">
-                                </div>
-                                <div class="form-items">
-                                    <input type="text" id="number-key" name="number" placeholder="Your Number"
-                                        class="form-control" required="*">
-                                </div>
-                            </div>
-                            <div class="form-items">
-                                <textarea rows="6" id="message-key" name="message" placeholder="Message" type="text"
-                                    class="form-control"></textarea>
-                            </div>
-                            <div id="ContactFormResponse"></div>
-                            <div class="form-items">
-                                <button type="submit" class="btn" name="submit">Submit</button>
-                            </div>
+            </div>
+        </div>
+    <!-- Site Banner Section End-->
 
-                        </form>
+    <!-- Products Details Here-->
+        <div class="products-details about-us spad">
+            <div class="container">
+                <div class="title Home-Title">
+                    <h1 class="underline">Product Name</h1>
+                </div>
+                <div class="products-details-inside about-us-inside">
+                    <div class="products-details-image products-details-items about-us-img">
+                        <img src="Images/Dark.webp" itemprop="image" alt="{{ProductName}}">
+                    </div>
+                    <div class="products-details-content products-details-items about-us-content">
+                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ut consequuntur qui officiis asperiores laudantium sapiente minima, aspernatur porro iure nihil ex voluptates quos esse officia fugiat eaque, id fugit natus quas libero ipsa necessitatibus dolorum? Tempore cupiditate fugiat beatae? lorem40</p></div>
+                        <div class="products-meta">
+                            <div class="products-price">
+                                <span>₹ 50000</span>
+                            </div>
+                            <div class="products-btn">
+                                <a href="{{ProductButtonLink}}" class="btn">Product Button</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    <!-- Products Details End-->
+
+    <!-- News Letter Here -->
+    <div class="newsletter">
+        <div class="container">
+            <h3 class="title underline">Subscribe to Our Newsletter</h3>
+            <form method="post" id="newsletter-form">
+                <input type="text" name="Email" id="newsletter-email-input" placeholder="Enter Your Email Here"
+                    class="form-control" required>
+                <button type="submit" class="subscribe" name="submit">Subscribe Now</button>
+            </form>
+            <div id="NewsLetterFormResponse"></div>
+        </div>
     </div>
-    <!--Contact Sections-Here-End-->
+    <!-- News Letter End -->
 
-    <!--Google Map Sections-->
-    <div class="google-loaction">
-        <iframe src="https://maps.google.com/maps?q={{AddressMap}}&output=embed" width="100%" height="450"
-            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <!--Google Map Sections-End-->
-
-
+    <!--Footer sections-->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-inside">
@@ -324,7 +193,8 @@ body {
                     <div class="footer-social">
                         <ul>
                             <li>
-                                <a href="#" itemprop="facebook" aria-label="facebook" rel="noreferrer" target="_blank">
+                                <a href="#" itemprop="facebook" aria-label="facebook" rel="noreferrer"
+                                    target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
                                         enable-background="new 0 0 100 100" viewBox="0 0 100 100">
                                         <g id="_x30_1._Facebook">
@@ -352,9 +222,10 @@ body {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" itemprop="whatsapp" aria-label="whatsapp" rel="noreferrer" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24"
-                                        viewBox="0 0 24 24">
+                                <a href="#" itemprop="whatsapp" aria-label="whatsapp" rel="noreferrer"
+                                    target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
                                         <path
                                             d="m17.507 14.307-.009.075c-2.199-1.096-2.429-1.242-2.713-.816-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.293-.506.32-.578.878-1.634.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.576-.05-.997-.042-1.368.344-1.614 1.774-1.207 3.604.174 5.55 2.714 3.552 4.16 4.206 6.804 5.114.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z">
                                         </path>
@@ -365,7 +236,8 @@ body {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" itemprop="youtube" aria-label="youtube" rel="noreferrer" target="_blank">
+                                <a href="#" itemprop="youtube" aria-label="youtube" rel="noreferrer"
+                                    target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-21 -117 682.66672 682">
                                         <path
                                             d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0">
@@ -374,7 +246,8 @@ body {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" itemprop="twitter" aria-label="twitter" rel="noreferrer" target="_blank">
+                                <a href="#" itemprop="twitter" aria-label="twitter" rel="noreferrer"
+                                    target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
                                         enable-background="new 0 0 100 100" viewBox="0 0 100 100">
                                         <path id="_x30_4.Twitter"
@@ -384,7 +257,8 @@ body {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" itemprop="linkedin" aria-label="linkedin" rel="noreferrer" target="_blank">
+                                <a href="#" itemprop="linkedin" aria-label="linkedin" rel="noreferrer"
+                                    target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
                                         enable-background="new 0 0 100 100" viewBox="0 0 100 100">
                                         <g id="_x31_0.Linkedin">
@@ -426,7 +300,8 @@ body {
                                         d="m29.393 23.36c-.874-.733-6-3.979-6.852-3.83-.4.071-.706.412-1.525 1.389a11.687 11.687 0 0 1 -1.244 1.347 10.757 10.757 0 0 1 -2.374-.88 14.7 14.7 0 0 1 -6.784-6.786 10.757 10.757 0 0 1 -.88-2.374 11.687 11.687 0 0 1 1.347-1.244c.976-.819 1.318-1.123 1.389-1.525.149-.854-3.1-5.978-3.83-6.852-.306-.362-.584-.605-.94-.605-1.032 0-5.7 5.772-5.7 6.52 0 .061.1 6.07 7.689 13.791 7.721 7.589 13.73 7.689 13.791 7.689.748 0 6.52-4.668 6.52-5.7 0-.356-.243-.634-.607-.94z">
                                     </path>
                                     <path d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"></path>
-                                    <path d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"></path>
+                                    <path d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z">
+                                    </path>
                                 </svg>
                             </div>
                             <div class="contact-decs">
@@ -435,8 +310,8 @@ body {
                         </div>
                         <div class="contact-items" itemscope="">
                             <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" enable-background="new 0 0 512 512"
-                                    viewBox="0 0 512 512">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                    enable-background="new 0 0 512 512" viewBox="0 0 512 512">
                                     <path
                                         d="m298.789 313.693c-12.738 8.492-27.534 12.981-42.789 12.981-15.254 0-30.05-4.489-42.788-12.981l-209.803-139.873c-1.164-.776-2.298-1.585-3.409-2.417v229.197c0 26.278 21.325 47.133 47.133 47.133h417.733c26.278 0 47.133-21.325 47.133-47.133v-229.198c-1.113.834-2.249 1.645-3.416 2.422z">
                                     </path>
@@ -451,8 +326,8 @@ body {
                         </div>
                         <div class="contact-items" itemscope="">
                             <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512"
-                                    viewBox="0 0 512 512">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1"
+                                    enable-background="new 0 0 512 512" viewBox="0 0 512 512">
                                     <g>
                                         <g>
                                             <path
@@ -463,7 +338,8 @@ body {
                                 </svg>
                             </div>
                             <div class="contact-decs" itemprop="address">
-                                <span itemprop="streetAddress"> 302/303, Nakshatra Heights 150 Feet Ring Road,</span>
+                                <span itemprop="streetAddress"> 302/303, Nakshatra Heights 150 Feet Ring
+                                    Road,</span>
                                 <span itemprop="streetAddress"> Opp Raiya Telephone Exchange,</span>
                                 <span itemprop="postalCode"> Gujarat 360005, India </span>
                             </div>
@@ -473,10 +349,11 @@ body {
             </div>
         </div>
     </footer>
+	<!--Footer sections-end-->
 
+    
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="sc.js"></script>
 </body>
-
 </html>
