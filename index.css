@@ -237,10 +237,6 @@ img {
 }
 
 /* Main slider */
-* {
-  box-sizing: border-box;
-}
-
 .carousel-container {
   overflow: hidden;
   position: relative;
@@ -398,6 +394,9 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar-nav {
+    margin: 0;
+  }
   .about-us-content,
   .about-us-img {
     flex: auto;
