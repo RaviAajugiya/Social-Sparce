@@ -12,6 +12,8 @@
   --second-font: "Signika", sans-serif;
 }
 
+
+
 .text-link {
   transition: color 0.2s, transform 0.2s;
   display: inline-block;
@@ -183,6 +185,98 @@ img {
   background-color: var(--second-color);
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+// model
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  outline: 0;
+  background-color: #00000069;
+  height: 100%
+}
+
+.modal-dialog {
+  max-width: 500px;
+  margin: 5rem auto
+}
+
+.modal-content {
+  background-color: var(--white);
+  background-clip: padding-box;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .3rem;
+  outline: 0
+}
+
+.modal-body .close span,
+.modal-body .social-media ul li a,
+.top-header {
+  background-color: var(--primary-color)
+}
+
+.modal-body {
+  position: relative
+}
+
+.modal.in {
+  display: block;
+  padding-top: 20px
+}
+
+.modal-body .close span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: block;
+  color: var(--white);
+  line-height: 25px;
+  border-radius: 50%;
+  font-size: 22px;
+  position: absolute;
+  margin: -10px;
+  right: 0;
+  top: 0
+}
+
+.modal-body .title {
+  font-size: 26px;
+  text-align: center
+}
+
+.modal-body .social-media {
+  padding: 20px 0;
+  display: block !important
+}
+
+.modal-body .social-media ul {
+  justify-content: center;
+  display: flex;
+  gap: 15px
+}
+
+.modal-body .social-media ul li a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  transition: .5s
+}
+
+.modal-body .social-media ul li a svg {
+  fill: var(--white);
+  padding: 5px
 }
 
 
@@ -404,6 +498,9 @@ h6 {
   transition: background-color 0.3s ease;
 }
 
+.counter-inside:hover {
+  // background-color: var(--second-color)
+}
 
 .counter-count {
   font-size: 36px;
