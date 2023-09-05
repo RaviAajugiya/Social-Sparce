@@ -121,25 +121,7 @@
         box-sizing: border-box
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-size: 42px;
-        font-family: var(--primary-font);
-        line-height: 1.5;
-        width: 100%;
-        margin-bottom: 0
-    }
-
-    .tags .tags-itmes ul li,
-    ol,
-    p,
-    ul {
-        font-family: var(--second-font)
-    }
+    
 
     p {
         text-align: justify;
@@ -182,7 +164,8 @@
         gap: 15px
 }
     .updates-detials-inside {
-        border: 1px solid #d5d3d3;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
         padding: 25px
     }
 
@@ -337,13 +320,12 @@
                     </div>
                 </div>
                 <div class="update-detials-image">
-                    <img src="images/blog-details.jpg"
-                        srcset="images/blog-details.jpg 480w, images/blog-details.jpg 800w"
-                        sizes="(max-width: 600px) 480px, 800px" width="1060px" height="464px" alt="socialsparsh"
+                        <img src="Images/update title.jpg"
+                         width="1060px" height="464px" alt="socialsparsh"
                         itemprop="image">
                 </div>
                 <div class="update-detials-content" itemprop="description">
-                    <h1 class="title">Great consultants are confident about their skills and expertise</h1>
+                    <h1 class="title underline">Great consultants are confident about their skills and expertise</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
