@@ -8,136 +8,146 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <style>
+    :root {
+        --primary-color: #0f561a;
+        --second-color: #8fd299;
+        --white: #ffffff;
+        --dark: #506172;
+        --bgcolor: #e0ebf1;
+        --primary-font: "Poppins", sans-serif;
+        --second-font: "Signika", sans-serif;
+    }
 
-:root {
-  --primary-color: #0f561a;
-  --second-color: #8fd299;
-  --white: #ffffff;
-  --dark: #506172;
-  --bgcolor: #e0ebf1;
-  --primary-font: "Poppins", sans-serif;
-  --second-font: "Signika", sans-serif;
-}
 
-    
-body {
-    font-family: var(--primary-font);
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  p {
-    margin: 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
+    body {
+        font-family: var(--primary-font);
+    }
 
-  .contact-information{
-    font-size: 20px;
-  }
-  
-  .contact-us-inside {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-us-items:first-child {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .contact-ditails {
-    margin: 0 0px;
-    padding: 10px;
-    min-width: 200px;
-    flex: 25%;
-    text-align: center;
-    border: 2px solid var(--second-color);
-    border-radius: 10px;
-    transition: box-shadow 0.5s ease-out;
-  }
-  .contact-ditails:hover {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  }
-  
-  .contact-ditails-icon {
-    width: 35px;
-    fill: var(--second-color);
-    background-color: var(--white);
-    margin: auto;
-    padding: 20px;
-  }
-  .contact-title{
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .contact-information {
+        font-size: 20px;
+    }
+
+    .contact-us-inside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-us-items:first-child {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .contact-ditails {
+        margin: 0 0px;
+        padding: 10px;
+        min-width: 260px;
+        flex: 25%;
+        text-align: center;
+        border: 2px solid var(--second-color);
+        border-radius: 10px;
+        transition: box-shadow 0.5s ease-out;
+
+        line-height: normal;
+    }
+
+    .contact-ditails:hover {
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-ditails-icon {
+        width: 35px;
+        fill: var(--second-color);
+        background-color: var(--white);
+        margin: auto;
+    }
+
+    .contact-title {
         text-align: center !important;
-  }
-  .contact-text .contact-title {
-    font-size: 25px;
-  }
-  
-  .contact-information {
-    display: inline-block;
-    margin: 20px 0;
-  }
-  
-  .contact-form input[type=text],
-  .contact-form textarea[type=text] {
-    box-sizing: border-box;
-    font-family: var(--primary-font);
-    width: calc(100% - 20px);
-    border-radius: 0.25rem;
-    font-size: 18px;
-    font-weight: 500;
-    height: auto;
-    margin: 10px;
-    padding: 15px 10px;
-    outline: 0;
-    color: var(--dark);
-    border: 1px var(--primary-color) solid;
-  }
-  
-  .contact-form input[type=text]::-moz-placeholder, .contact-form textarea[type=text]::-moz-placeholder {
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .contact-form input[type=text]::placeholder,
-  .contact-form textarea[type=text]::placeholder {
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .contact-form {
-    margin-top: 50px;
-    font-size: 20px;
-  }
-  .contact-form .title {
-    text-align: center;
-  }
-  
-  .form-items {
-    text-align: center;
-  }
-  .form-items button {
-    margin: 25px;
-    width: 150px;
-    height: 40px;
-    border: 1px solid black;
-    font-size: 18px;
-    transition: all 1s ease-out;
-    background-color: var(--white);
-  }
-  .form-items button:hover {
-    background-color: var(--second-color);
-  }/*# sourceMappingURL=contact.css.map */
+    }
+
+    .contact-text .contact-title {
+        font-size: 25px;
+    }
+
+    .contact-information {
+        display: inline-block;
+        margin: 20px 0;
+    }
+
+    .contact-form input[type=text],
+    .contact-form textarea[type=text] {
+        box-sizing: border-box;
+        font-family: var(--primary-font);
+        width: calc(100% - 20px);
+        border-radius: 0.25rem;
+        font-size: 18px;
+        font-weight: 500;
+        height: auto;
+        margin: 10px;
+        padding: 15px 10px;
+        outline: 0;
+        color: var(--dark);
+        border: 1px var(--primary-color) solid;
+    }
+
+    .contact-form input[type=text]::-moz-placeholder,
+    .contact-form textarea[type=text]::-moz-placeholder {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .contact-form input[type=text]::placeholder,
+    .contact-form textarea[type=text]::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .contact-form {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+    .contact-form .title {
+        text-align: center;
+    }
+
+    .form-items {
+        text-align: center;
+    }
+
+    .form-items button {
+        margin: 25px;
+        width: 150px;
+        height: 40px;
+        border: 1px solid black;
+        font-size: 18px;
+        transition: all 1s ease-out;
+        background-color: var(--white);
+    }
+
+    .form-items button:hover {
+        background-color: var(--second-color);
+    }
+
+    /*# sourceMappingURL=contact.css.map */
 </style>
+
 <body>
 
 
@@ -210,6 +220,27 @@ body {
         </div>
     </div>
 
+    <div class="contact-custom spad">
+        <div class="container ">
+            <div class="title Home-Title ">
+                <h1 class="title underline">Book a Demo</h1>
+            </div>
+            <div class="contact-custom-inside about-us-inside">
+                <div class="contact-custom-item about-us-img">
+                    <img src="Images/Dark.webp" alt="" srcset="" width="600px" height="450px">
+                </div>
+                <div class="contact-custom-item about-us-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, modi autem sunt a molestias
+                        corporis perferendis ipsum sequi magnam fugit porro beatae animi illum, dignissimos
+                        necessitatibus fuga eum itaque inventore!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusamus laudantium autem
+                        molestiae dolores vel provident alias, quos magni optio in voluptatum praesentium veritatis quas
+                        eveniet eum corporis placeat ipsam!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Contact Sections-Here-->
     <div class="contact-us spad">
         <div class="container">
@@ -231,7 +262,8 @@ body {
                         <div class="contact-text">
                             <div itemprop="address">
                                 <a class="contact-title" itemprop="brand">Address Information</a>
-                                <p class="contact-information" itemprop="streetAddress">Nakshatra Heights 150 Feet Ring Road, Opp Raiya Telephone Exchange,</p>
+                                <p class="contact-information" itemprop="streetAddress">Nakshatra Heights 150 Feet Ring
+                                    Road, Opp Raiya Telephone Exchange,</p>
                             </div>
                         </div>
                     </div>
@@ -248,7 +280,8 @@ body {
                         </div>
                         <div class="contact-text">
                             <p class="contact-title">Phone number</p>
-                            <a class="contact-information" href="tel:{{MobileNumber}}" itemprop="telephone">+91 1234567890</a>
+                            <a class="contact-information" href="tel:{{MobileNumber}}" itemprop="telephone">+91
+                                1234567890</a>
                         </div>
                     </div>
                     <div class="contact-ditails">
@@ -475,8 +508,8 @@ body {
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="sc.js"></script>
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="sc.js"></script>
 </body>
 
 </html>
