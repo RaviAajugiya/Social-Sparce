@@ -903,6 +903,7 @@ h6 {
 }
 
 .modal {
+  z-index: 99999;
   position: fixed;
   top: 0;
   left: 0;
@@ -915,7 +916,6 @@ h6 {
   top: 10em;
   left: 0;
   right: 0;
-  z-index: 9999;
   background: var(--bgcolor);
   text-align: center;
   width: 25%;
