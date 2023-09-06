@@ -71,7 +71,7 @@ img {
   position: sticky;
   z-index: 99999;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.5);
   top: 0;
 }
 
@@ -108,7 +108,6 @@ img {
 
 .navbar-nav .nav-item .nav-link {
   font-size: 18px;
-  padding: 0 0.3rem;
   transition: color 0.2s, transform 0.2s;
   display: inline-block;
 }
@@ -157,8 +156,9 @@ img {
     height: 100vh;
   }
 
-  .navbar-collapse {
+  .navbar-collapse, .top-header {
     display: none;
+    
   }
 
   .navbar-nav{
@@ -379,7 +379,7 @@ img {
 .underline::after {
   content: "";
   position: absolute;
-  bottom: 2px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   height: 2.5px;
@@ -1066,3 +1066,95 @@ h6 {
     width: 25px;
   }
 }
+
+
+// copyright
+
+.copy-right{
+  background-color: black;
+  border-top: 2px solid rgba(124, 124, 124, 0.459);
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+  }
+
+  a{
+    margin-left: 5px;
+    color: var(--second-color);
+  }
+}
+
+
+// Top header
+
+.top-header{
+  overflow: hidden;
+  height: 55px;
+
+  a{
+    text-decoration: none !important;
+  }
+  background-color: black;
+
+  .top-header-items, .top-contact, .top-header-inside{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .top-header-items{
+    gap: 30px;
+  }
+  
+  .top-contact{
+    gap: 10px;
+  }
+
+  .icon{
+    display: flex;
+    width: 25px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50%;
+    height: 55px;
+    z-index: 0 ;
+    transform: skew(-26deg);
+    padding-left: 20px;
+    background: var(--second-color);
+}
+  
+
+  .top-social{
+    ul{
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin: 10px 0;
+
+      li{
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    svg{
+      fill: white;
+
+      &:hover{
+        fill: var(--second-color);
+      }
+    }
+  }
+}
+
+
