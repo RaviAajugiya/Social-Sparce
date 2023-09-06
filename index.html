@@ -1048,11 +1048,8 @@
             // show one slide base on index number
             slides[slideIndex].style.display = "block";
 
-            dots.forEach((dot) => {
-                dot.classList.remove("active");
-            });
+            
 
-            dots[slideIndex].classList.add("active");
         }
 
         // autoplay slides --------
@@ -1069,18 +1066,6 @@
             }
         }, 1000); // 1sec
 
-
-
-
-
-        const slideTrack = document.getElementById('slideTrack2');
-
-        slideTrack.addEventListener('animationiteration', () => {
-            slideTrack.style.animation = 'none';
-            setTimeout(() => {
-                slideTrack.style.animation = 'scroll 15s linear infinite';
-            }, 0);
-        });
     </script>
     <script src="sc.js"></script>
 </body>

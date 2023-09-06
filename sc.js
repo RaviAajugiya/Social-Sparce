@@ -2,7 +2,7 @@
 function clickHandle(e) {
     // console.log(e.target.className === 'nav-link dropdown-toggle');
     // console.log(e.target.className === 'navbar-nav');
-    console.log(e.target.className);
+    // console.log(e.target.className);
     if (!(e.target.className == 'navbar-nav' || e.target.className == 'nav-link dropdown-toggle')) {
         document.querySelector(".navbar-collapse").classList.remove("show")
     }
