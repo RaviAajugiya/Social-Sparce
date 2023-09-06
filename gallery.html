@@ -73,7 +73,7 @@
             position: relative;
             overflow: hidden;
             transition: transform 0.3s ease;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.5);
             padding: 15px;
             border-radius: 10px;
 
@@ -110,6 +110,10 @@
 
         .photo-gallery-item:hover .image-title {
             opacity: 1;
+        }
+
+        .img-container{
+            overflow: hidden;
         }
     </style>
 </head>
@@ -199,41 +203,36 @@
         <div class="photo-gallery-inside">
             <div class="photo-gallery-item">
                 <a href="Images/Dark.webp" data-lightbox="photos">
-                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    <div class="img-container">
+                        <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    </div>
                     <span class="image-title">Image Title 1</span>
                 </a>
             </div>
             <div class="photo-gallery-item">
                 <a href="Images/Dark.webp" data-lightbox="photos">
-                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
-                    <span class="image-title">Image Title 2</span>
+                    <div class="img-container">
+                        <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    </div>
+                    <span class="image-title">Image Title 1</span>
                 </a>
             </div>
             <div class="photo-gallery-item">
                 <a href="Images/Dark.webp" data-lightbox="photos">
-                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
-                    <span class="image-title">Image Title 3</span>
+                    <div class="img-container">
+                        <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    </div>
+                    <span class="image-title">Image Title 1</span>
                 </a>
             </div>
             <div class="photo-gallery-item">
                 <a href="Images/Dark.webp" data-lightbox="photos">
-                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
-                    <span class="image-title">Image Title 4</span>
+                    <div class="img-container">
+                        <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
+                    </div>
+                    <span class="image-title">Image Title 1</span>
                 </a>
             </div>
-            <div class="photo-gallery-item">
-                <a href="Images/Dark.webp" data-lightbox="photos">
-                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
-                    <span class="image-title">Image Title 4</span>
-                </a>
-            </div>
-            <div class="photo-gallery-item">
-                <a href="Images/Dark.webp" data-lightbox="photos">
-                    <img class="img-fluid" src="Images/Dark.webp" width="350px" height="233px" alt="Image Title">
-                    <span class="image-title">Image Title 4</span>
-                </a>
-            </div>
-            <!-- Repeat more photo-gallery-items here -->
         </div>
     </div>
     <!-- Gallery Section End-->
