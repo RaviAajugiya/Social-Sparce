@@ -1,16 +1,11 @@
 
 function clickHandle(e) {
-    // console.log(e.target.className === 'nav-link dropdown-toggle');
-    // console.log(e.target.className === 'navbar-nav');
-    // console.log(e.target.className);
     if (!(e.target.className == 'navbar-nav' || e.target.className == 'nav-link dropdown-toggle')) {
         document.querySelector(".navbar-collapse").classList.remove("show")
     }
     if ((e.target.className == 'modal')) {
         document.querySelector(".modal").hidden = true;
     }
-    // document.querySelector(".dropdown-menu").classList.toggle("show")
-
 }
 
 window.addEventListener('mouseup', clickHandle)

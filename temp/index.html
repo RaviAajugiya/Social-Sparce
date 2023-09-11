@@ -4,134 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonial Slider</title>
+    <title>Document</title>
+
     <style>
-        /* Add your CSS styles here */
-        :root {
-            --primary-color: #0f561a;
-            --second-color: #8fd299;
-            --white: #ffffff;
-            --dark: #506172;
-            --bgcolor: #e0ebf1;
-            --primary-font: "Poppins", sans-serif;
-            --second-font: "Signika", sans-serif;
+        .logo-slider-inner {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 2rem;
+            background: #faf6ed;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
 
-        .testimonial_section {
-            text-align: center;
-            padding: 50px 0;
+        .logo-slider-items {
+            animation: animate 2s alternate linear infinite;
         }
 
-        .title {
-            font-size: 24px;
-            margin-bottom: 30px;
-        }
 
-        .testi-item {
-            display: none;
-            transition: opacity 0.5s ease;
-            color: var(--dark);
-        }
 
-        .testi-item.active {
-            display: block;
-            opacity: 1;
-        }
-
-        .decs {
-            font-size: 16px;
-        }
-
-        .title {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        .designation {
-            font-size: 14px;
-            color: var(--second-color);
-        }
-
-        /* Style for the navigation buttons */
-        .testi-control {
-            margin-top: 20px;
-        }
-
-        .testi-control button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            margin: 0 10px;
-            color: var(--primary-color);
-            font-weight: bold;
-            /* Make the text bold for better visibility */
-        }
-
-        @keyframes zoomIn {
-            from {
-                transform: scale(0);
-                opacity: 0;
+        @keyframes animate {
+            0% {
+                transform: translate3d(0, 0, 0);
             }
 
-            to {
-                transform: scale(1);
-                opacity: 1;
+            100% {
+                transform: translate3d(-1200px, 0, 0);
             }
         }
 
-        .testi-item.active {
-            animation: zoomIn 0.5s ease;
-        }
+        @media (max-width:767px) {
 
+            .logo-slider-inner {
+                width: 95%;
+                border-radius: 0;
+                padding: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="testimonial_section spad">
-        <div class="container">
-            <h3 class="title">What our Customers Have to Say</h3>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="testi-item active" itemprop="review" itemscope itemtype="https://schema.org/Review">
-                        <img src="images/testimonial-icon.png" width="80px" height="80px" alt="socialsparsh"
-                            itemprop="name">
-                        <p class="decs" itemprop="reviewBody"> 111111111111111Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. </p>
-                        <div class="title" itemprop="author">Lorem Ipsum</div>
-                        <div class="designation" itemprop="designation">Weybee Solution pvt. ltd.</div>
-                    </div>
-                    <div class="testi-item active" itemprop="review" itemscope itemtype="https://schema.org/Review">
-                        <img src="images/testimonial-icon.png" width="80px" height="80px" alt="socialsparsh"
-                            itemprop="name">
-                        <p class="decs" itemprop="reviewBody"> 2222222222222222222222222 Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. </p>
-                        <div class="title" itemprop="author">Lorem Ipsum</div>
-                        <div class="designation" itemprop="designation">Weybee Solution pvt. ltd.</div>
-                    </div>
-                    <div class="testi-item active" itemprop="review" itemscope itemtype="https://schema.org/Review">
-                        <img src="images/testimonial-icon.png" width="80px" height="80px" alt="socialsparsh"
-                            itemprop="name">
-                        <p class="decs" itemprop="reviewBody"> 33333333333333333333Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. </p>
-                        <div class="title" itemprop="author">Lorem Ipsum</div>
-                        <div class="designation" itemprop="designation">Weybee Solution pvt. ltd.</div>
-                    </div> <!-- Repeat this structure for each testimonial item -->
-                    <div class="testi-control"> <button id="prevButton">Previous</button> <button
-                            id="nextButton">Next</button> </div>
-                </div>
-            </div>
-        </div>
+    <div class="logo-slider">       
+        <div class="logo-slider-inner">           
+            <div class="logo-slider-items">
+                <img alt="" src="../Images/team.webp">
+            </div>           
+            <div class="logo-slider-items">
+                <img alt="" src="../Images/hogwarts-logo.webp">
+            </div>           
+            <div class="logo-slider-items">
+                <img alt="" src="../Images/hogwarts-logo.webp">
+            </div>           
+            <div class="logo-slider-items">
+                <img alt="" src="../Images/hogwarts-logo.webp">
+            </div>           
+            <div class="logo-slider-items">
+                <img alt="" src="../Images/logo.svg">
+            </div>           
+                     
+        </div>   
     </div>
-    <script>
-        let currentIndex = 0; const testimonials = document.querySelectorAll('.testi-item'); const prevButton = document.getElementById('prevButton'); const nextButton = document.getElementById('nextButton'); function showTestimonial(index) { testimonials.forEach((testimonial, i) => { if (i === index) { testimonial.classList.add('active'); testimonial.classList.remove('prev'); } else { testimonial.classList.remove('active'); if (i === currentIndex) { testimonial.classList.add('prev'); } } }); } function nextTestimonial() { currentIndex = (currentIndex + 1) % testimonials.length; showTestimonial(currentIndex); } function prevTestimonial() { currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length; showTestimonial(currentIndex); } showTestimonial(currentIndex); prevButton.addEventListener('click', prevTestimonial); nextButton.addEventListener('click', nextTestimonial);    
-    </script>
+
 </body>
 
 </html>
