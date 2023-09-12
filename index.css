@@ -640,7 +640,7 @@ h6 {
 
 .slide-track {
   display: flex;
-  animation: scroll 5s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .container-fluid .slide {
