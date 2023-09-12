@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <style>
-        .logo-slider-inner {
-            display: flex;
-            width: 100%;
-            margin: 0 auto;
-            overflow: hidden;
-            padding: 2rem;
-            background: #faf6ed;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        }
+        body {
+  background-color: #333;
+}
 
-        .logo-slider-items {
-            animation: animate 2s alternate linear infinite;
-        }
+img {
+  width: 100px;
+  height: 100px;
+  animation: scroll 5s linear infinite;
+}
 
+.slide-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+}
 
+.slider {
+  margin-top: 70px;
+  background-color: whitesmoke;
+  padding: 8em 2em;
+}
 
-        @keyframes animate {
-            0% {
-                transform: translate3d(0, 0, 0);
-            }
-
-            100% {
-                transform: translate3d(-1200px, 0, 0);
-            }
-        }
-
-        @media (max-width:767px) {
-
-            .logo-slider-inner {
-                width: 95%;
-                border-radius: 0;
-                padding: 0;
-            }
-        }
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translatex(-1000%)}
+}
     </style>
 </head>
-
 <body>
-    <div class="logo-slider">       
-        <div class="logo-slider-inner">           
-            <div class="logo-slider-items">
-                <img alt="" src="../Images/team.webp">
-            </div>           
-            <div class="logo-slider-items">
-                <img alt="" src="../Images/hogwarts-logo.webp">
-            </div>           
-            <div class="logo-slider-items">
-                <img alt="" src="../Images/hogwarts-logo.webp">
-            </div>           
-            <div class="logo-slider-items">
-                <img alt="" src="../Images/hogwarts-logo.webp">
-            </div>           
-            <div class="logo-slider-items">
-                <img alt="" src="../Images/logo.svg">
-            </div>           
-                     
-        </div>   
-    </div>
-
+    <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+          </div> 
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+          </div> 
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+          </div> 
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+          </div> 
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+          </div> 
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+          </div> 
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+          </div> 
+          <div class="slide">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+          </div> 
+        </div>
+      </div>
 </body>
-
 </html>

@@ -708,9 +708,8 @@ h6 {
 }
 
 //footer slider
-.logo-slider {
-  font-size: 35px;
-}
+
+
 
 .slider-container {
   display: flex;
@@ -722,7 +721,7 @@ h6 {
 
 .slide-track {
   display: flex;
-  animation: scroll 15s linear infinite;
+  animation: scroll 5s linear infinite;
 }
 
 
@@ -738,6 +737,10 @@ h6 {
   }
 }
 
+.logo-tag{
+  font-size: 20px;
+}
+
 
 @keyframes scroll {
   0% {
@@ -745,12 +748,10 @@ h6 {
   }
 
   100% {
-    transform: translateX(-2000px);
+    transform: translateX(-100vw);
     /* Adjust to your preferred slide width */
   }
 }
-
-
 
 //footer
 
