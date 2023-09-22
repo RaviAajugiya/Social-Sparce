@@ -86,8 +86,11 @@ img {
 }
 
 .navbar-brand img {
-  max-width: 300px;
-  max-height: 80px;
+  max-height: 65px;
+}
+
+.navbar-brand {
+  line-height: 4px;
 }
 
 .navbar-toggler {
@@ -401,7 +404,6 @@ h6 {
 
 
 // ouer service
-
 
 .our-serivces-main,
 .updates .updates-main {
